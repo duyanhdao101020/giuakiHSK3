@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Đề thi giữa kỳ HSK 3 – Bài 1–10 (có nghe)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3f5f7;--paper:#fff;--ink:#14213d;--mute:#5b6678;--line:#d5dbe3;--jade:#1f7a6d;--ok:#1b7a4a;--okbg:#e3f4ea;--bad:#b3261e;--badbg:#fbe7e5;--seal:#c23a2e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151d;--paper:#18202b;--ink:#e8edf3;--mute:#9aa6b6;--line:#2c3746;--jade:#4cc2b0;--ok:#6fd49b;--okbg:#14342390;--bad:#ff8a80;--badbg:#3a1a18;--seal:#ff7a6b}}
+:root[data-theme="dark"]{--bg:#10151d;--paper:#18202b;--ink:#e8edf3;--mute:#9aa6b6;--line:#2c3746;--jade:#4cc2b0;--ok:#6fd49b;--okbg:#14342390;--bad:#ff8a80;--badbg:#3a1a18;--seal:#ff7a6b}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Be Vietnam Pro",system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding:24px 16px 80px}
+.zh{font-family:"Noto Serif SC","Songti SC","SimSun",serif}
+header{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:24px;margin-bottom:20px}
+h1{margin:0 0 4px;font-size:1.6rem;line-height:1.25}
+h1 .zh{display:block;font-size:2.4rem;font-weight:700;letter-spacing:.08em}
+header p{margin:6px 0 0;color:var(--mute);font-size:.92rem}
+.name{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.name input{flex:1 1 180px;font:inherit;padding:8px 10px;border:0;border-bottom:1px solid var(--ink);background:transparent;color:var(--ink)}
+section{margin:28px 0}
+section>h2{font-size:1.05rem;margin:0 0 4px}
+section>p{margin:0 0 12px;color:var(--mute);font-size:.9rem}
+.q{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px;margin-bottom:12px}
+.q.ok{border-color:var(--ok)}.q.bad{border-color:var(--bad)}
+.qt{margin:0 0 10px;font-size:1.2rem}
+.qt b{color:var(--jade);font-family:"Be Vietnam Pro",sans-serif;font-size:.9rem;margin-right:6px}
+.qt i{font-style:normal;display:inline-block;min-width:3em;border-bottom:2px solid var(--ink);text-align:center}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media (max-width:520px){.opts{grid-template-columns:1fr}}
+label{display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-radius:4px;cursor:pointer;font-size:1.05rem}
+label:hover{border-color:var(--jade)}
+input[type=radio]{accent-color:var(--jade);width:18px;height:18px;flex:none}
+label:focus-within{outline:2px solid var(--jade);outline-offset:2px}
+label.right{background:var(--okbg);border-color:var(--ok)}
+label.wrong{background:var(--badbg);border-color:var(--bad)}
+.ex{display:none;margin:10px 0 0;font-size:.88rem;color:var(--mute);border-left:3px solid var(--jade);padding-left:10px}
+.done .ex{display:block}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:8px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:.9rem}
+.bar div{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar div span{display:block;height:100%;width:0;background:var(--jade);transition:width .2s}
+button{font:inherit;font-weight:600;padding:11px 22px;border-radius:4px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer}
+button.ghost{background:transparent;color:var(--ink)}
+button:focus-visible{outline:2px solid var(--jade);outline-offset:2px}
+.act{display:flex;gap:10px;flex-wrap:wrap}
+#res{display:none;background:var(--paper);border:2px solid var(--seal);border-radius:6px;padding:20px;margin:20px 0;text-align:center}
+#res .sc{font-size:3rem;font-weight:700;color:var(--seal);line-height:1.1}
+#res p{margin:6px 0 0;color:var(--mute)}
+main.pre .bar,main.pre #f,main.pre .act{display:none}
+main:not(.pre) .start{display:none}
+.start{margin-top:16px}
+.wi{width:100%;box-sizing:border-box;font-size:1.2rem;padding:9px 12px;border:1px solid var(--line);border-radius:4px;background:transparent;color:var(--ink)}
+.wi:focus{outline:2px solid var(--jade);outline-offset:2px}
+.au{display:flex;align-items:center;gap:12px;margin:0 0 10px;font-size:.88rem;color:var(--mute)}
+.au button{padding:8px 16px}
+.bar b{font-variant-numeric:tabular-nums}
+.bar.warn b{color:var(--seal)}
+#res{position:relative}
+.mk{position:absolute;right:8px;bottom:6px;line-height:0}
+.mk s{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--mute);opacity:.3;margin-left:3px}
+.mk s:nth-child(5n){margin-right:7px}
+.sk{font-weight:400;color:var(--mute);font-size:.8rem}
+.note{margin:14px 0 0!important;padding:8px 12px;border-left:3px solid var(--seal);background:var(--bg);color:var(--ink)!important}
+section>.note{margin:0 0 12px!important;font-size:.95rem}
+@media print{.bar,.act{display:none}}
+</style>
+</head>
+<body>
+<main class="pre">
+<header>
+<h1><span class="zh">HSK 3 期中考试</span>Đề thi giữa kỳ HSK 3 – Bài 1 đến 10</h1>
+<p>45 câu · làm bài khoảng 45 phút · đồng hồ tối đa 60 phút · thang 300 điểm (Nghe 100 · Đọc 100 · Viết 100) · không dùng pinyin, không xem sách</p>
+<p>Giáo trình chuẩn HSK 3, bài 1–10. Gồm nghe cả câu, nghe chép, đọc hiểu từ vựng và ngữ pháp, viết câu, dịch câu. Mỗi câu nghe được phát tối đa 2 lần; hết 60 phút bài tự động nộp.</p>
+<p class="note"><b>Lưu ý:</b> với các câu yêu cầu gõ chữ Hán (phần B và E), <b>không cần gõ dấu câu</b> (，。？！) và <b>không cần cách chữ</b>. Chỉ gõ liền các chữ Hán.</p>
+<div class="name"><input id="nm" aria-label="Họ và tên" placeholder="Họ và tên"><input id="cl" aria-label="Lớp" placeholder="Lớp"></div>
+<div class="start"><button id="go" type="button">Bắt đầu làm bài (60 phút)</button></div>
+</header>
+<div class="bar"><span id="cnt">0/45</span><div><span id="pg"></span></div><b id="tm">60:00</b></div>
+<form id="f"></form>
+<div class="act"><button id="sub" type="button">Nộp bài</button><button class="ghost" id="rst" type="button">Làm lại (xáo đáp án)</button></div>
+<div id="res" role="status"></div>
+</main>
+<script>
+var S=[
+{t:"A. Nghe hiểu",d:"Nghe cả câu (tối đa 2 lần mỗi câu), rồi chọn đáp án đúng.",q:[
+[1,"Cuối tuần người nói định làm gì?",["Ở nhà ôn bài", "Đi leo núi", "Đi mua sắm", "Đến công viên"],"周末我打算在家复习，你呢？ – Cuối tuần tôi định ở nhà ôn bài, còn bạn?","L01"],
+[2,"Văn phòng giám đốc ở tầng mấy?",["Tầng 6", "Tầng 4", "Tầng 8", "Tầng 2"],"经理的办公室在六楼，你坐电梯上去吧。 – Văn phòng giám đốc ở tầng 6, bạn đi thang máy lên nhé.","L02"],
+[3,"Trên bàn có gì?",["Một cốc trà và hai cái bánh mì", "Hai cốc trà và một cái bánh mì", "Một cốc cà phê và hai cái bánh mì", "Một chai nước và hai cái bánh mì"],"桌子上放着一杯茶和两个面包。 – Trên bàn đặt một cốc trà và hai cái bánh mì.","L03"],
+[4,"Người nói nhận xét gì về cô ấy?",["Vừa thông minh vừa nhiệt tình", "Vừa trẻ vừa chăm chỉ", "Vừa cao vừa gầy", "Vừa xinh vừa vui tính"],"她又聪明又热情，客人都喜欢她。 – Cô ấy vừa thông minh vừa nhiệt tình, khách ai cũng thích.","L04"],
+[5,"Người nói khuyên điều gì?",["Mặc thêm quần áo, cẩn thận bị cảm", "Uống thêm nước", "Đi ngủ sớm", "Đi khám bệnh"],"最近天气越来越冷了，你要多穿点儿衣服，小心感冒。 – Dạo này trời càng ngày càng lạnh, bạn nên mặc thêm áo, cẩn thận cảm.","L05"],
+[6,"Người nói đang tìm gì?",["Kính", "Điện thoại", "Quyển sách", "Chìa khóa"],"我的眼镜怎么突然找不到了？刚才还在桌子上。 – Sao kính của tôi đột nhiên không thấy nữa? Vừa nãy còn ở trên bàn.","L06"],
+[7,"Bây giờ là mấy giờ?",["8 giờ 45", "9 giờ 15", "8 giờ 30", "9 giờ 45"],"我们九点上班，现在差一刻九点，快走吧。 – Chín giờ bắt đầu làm, bây giờ là 9 giờ kém 15, đi nhanh thôi.","L07"],
+[8,"Người nói có ý gì?",["Bạn đi đâu tôi đi đó", "Tôi muốn đi một mình", "Tôi không biết đường", "Tôi không muốn đi"],"你去哪儿我就去哪儿，我们一起去吧。 – Bạn đi đâu tôi đi đó, chúng ta cùng đi nhé.","L08"],
+[9,"So với người nói, em gái thế nào?",["Cao bằng nhưng gầy hơn", "Cao hơn và gầy hơn", "Thấp hơn và béo hơn", "Cao bằng nhưng béo hơn"],"妹妹的个子跟我一样高，但是比我瘦。 – Em gái cao bằng tôi nhưng gầy hơn tôi.","L09"],
+[10,"Người nói thấy môn nào khó hơn?",["Toán", "Lịch sử", "Thể dục", "Âm nhạc"],"数学比历史难多了，我每天都要复习两个小时。 – Toán khó hơn Lịch sử nhiều, mỗi ngày tôi phải ôn hai tiếng.","L10"]]},
+{t:"B. Nghe chép",d:"Chỉ nghe, không có chữ. Nghe tối đa 2 lần rồi gõ lại cả câu bằng chữ Hán. Chấp nhận 她 và 他 thay cho nhau.",q:[
+[1,"Nghe và gõ lại đúng câu đã nghe.",["周末你有什么打算？"],"Đáp án: 周末你有什么打算？ – Cuối tuần bạn định làm gì? (chấp nhận 她/他 thay cho nhau)","C01",'w','d'],
+[4,"Nghe và gõ lại đúng câu đã nghe.",["她总是笑着跟客人说话。"],"Đáp án: 她总是笑着跟客人说话。 – Cô ấy luôn cười khi nói chuyện với khách. (chấp nhận 她/他 thay cho nhau)","C02",'w','d'],
+[5,"Nghe và gõ lại đúng câu đã nghe.",["我最近越来越胖了。"],"Đáp án: 我最近越来越胖了。 – Dạo này tôi càng ngày càng béo. (chấp nhận 她/他 thay cho nhau)","C03",'w','d'],
+[7,"Nghe và gõ lại đúng câu đã nghe.",["我跟她都认识五年了。"],"Đáp án: 我跟她都认识五年了。 – Tôi và cô ấy quen nhau năm năm rồi. (chấp nhận 她/他 thay cho nhau)","C04",'w','d'],
+[9,"Nghe và gõ lại đúng câu đã nghe.",["他的汉语说得跟中国人一样好。"],"Đáp án: 他的汉语说得跟中国人一样好。 – Tiếng Trung của anh ấy nói giỏi như người Trung Quốc. (chấp nhận 她/他 thay cho nhau)","C05",'w','d']]},
+{t:"C. Từ vựng",d:"Chọn từ thích hợp điền vào chỗ trống.",q:[
+[1,"我今天忘了____伞。",["带","搬","骑","换"],"带 (mang theo) – bài 1."],
+[1,"明天有考试，我要好好____。",["复习","打算","着急","搬"],"复习 (ôn tập) – bài 1."],
+[6,"他每天都去公园____身体。",["锻炼","聊天","离开","帮忙"],"锻炼身体: tập thể dục – bài 6."],
+[2,"这个问题很____，我一下子就明白了。",["容易","难","胖","矮"],"容易 (dễ) hợp với “一下子就明白了” – bài 2."],
+[7,"我和同事约好八点见面，可是他____了。",["迟到","欢迎","结婚","感兴趣"],"迟到: đến muộn – bài 7."],
+[6,"你说得太快了，我听不____。",["清楚","重要","满意","健康"],"听不清楚: bổ ngữ khả năng “V不+…” – bài 6."],
+[10,"弟弟的个子比我____。",["矮","旧","甜","绿"],"个子矮: dáng người thấp – bài 10."],
+[8,"这个房间很____，我可以睡个好觉。",["安静","重要","聪明","热情"],"安静: yên tĩnh – bài 8."],
+[9,"他的字写得跟我的____。",["一样","一直","最后","中间"],"A跟B一样: giống nhau – bài 9."],
+[10,"我们学校在地铁站____，很方便。",["附近","环境","主要","历史"],"附近: gần đó, lân cận – bài 10."]]},
+{t:"D. Ngữ pháp",d:"Chọn đáp án đúng.",q:[
+[1,"作业写____了吗？",["好","到","了","着"],"Bổ ngữ kết quả “好”: 写好 = làm xong – bài 1."],
+[1,"他一个人也____认识。",["不","没","没有","别"],"Cấu trúc “一……也/都+不/没……”: ở đây “认识” phủ định bằng 不 – bài 1."],
+[3,"你想喝茶____咖啡？",["还是","或者","又","再"],"Câu hỏi lựa chọn dùng 还是; 或者 dùng trong câu trần thuật – bài 3."],
+[3,"桌子上放____一本书。",["着","了","过","的"],"Biểu đạt tồn tại: Từ chỉ nơi chốn + V着 + số lượng + danh từ – bài 3."],
+[4,"这件衣服____便宜____好看。",["又……又……","越……越……","一……也……","还是……或者……"],"又……又……: vừa… vừa… – bài 4."],
+[5,"天气____热了，我们穿裙子吧。",["越来越","越","又","还是"],"越来越 + tính từ: càng ngày càng – bài 5."],
+[6,"他____还在这儿，现在不见了。",["刚才","刚","一会儿","马上"],"刚才 là danh từ thời gian, đứng được trước chủ ngữ và sau chủ ngữ; 刚 là phó từ – bài 6."],
+[7,"我学汉语已经____了。",["两年","以前","一样","昨天"],"Thời lượng đứng sau động từ: 学了两年了 – bài 7."],
+[7,"现在是 8:45，可以说：",["差一刻九点","八点半","九点一刻","差半九点"],"8:45 = 差一刻九点 (thiếu 15 phút đến 9 giờ) – bài 7."],
+[8,"这本书很好，我想____看一遍。",["再","又","还是","或者"],"再: hành động chưa xảy ra, sẽ lặp lại; 又: đã lặp lại – bài 8."],
+[8,"你想吃什么，我就做____。",["什么","哪儿","谁","怎么"],"Đại từ nghi vấn dùng linh hoạt: hai vế dùng cùng một đại từ – bài 8."],
+[10,"哥哥比我高____。",["得多","很","非常","太"],"A比B+Adj+得多/多了: hơn nhiều – bài 10."]]},
+{t:"E. Viết câu",d:"Gõ cả câu bằng chữ Hán (cần bộ gõ tiếng Trung).",q:[
+[10,"Sắp xếp thành câu: 数学 / 比 / 历史 / 难多了",["数学比历史难多了"],"Đáp án: 数学比历史难多了。 (A比B+Adj+多了) – bài 10.",null,'w'],
+[9,"Sắp xếp thành câu: 她的汉语 / 说得 / 跟中国人 / 一样好",["她的汉语说得跟中国人一样好", "她汉语说得跟中国人一样好"],"Đáp án: 她的汉语说得跟中国人一样好。 – bài 9.",null,'w'],
+[4,"Sắp xếp thành câu: 老师 / 笑着 / 跟 / 学生 / 说话",["老师笑着跟学生说话", "老师跟学生笑着说话"],"Đáp án: 老师笑着跟学生说话。 (V1着+V2) – bài 4.",null,'w'],
+[7,"Sắp xếp thành câu: 我 / 在北京 / 住了 / 一年",["我在北京住了一年", "我在北京住了一年了"],"Đáp án: 我在北京住了一年。 (thời lượng sau động từ) – bài 7.",null,'w'],
+[1,"Sắp xếp thành câu: 我 / 一个人 / 也 / 不 / 认识",["我一个人也不认识", "一个人我也不认识"],"Đáp án: 我一个人也不认识。 (一……也+不……) – bài 1.",null,'w']]},
+{t:"F. Dịch Việt – Trung",d:"Chọn bản dịch đúng.",q:[
+[1,"“Cuối tuần bạn định làm gì?”",["周末你有什么打算？","你什么打算有周末？","周末什么你打算有？","你有周末什么打算？"],"周末你有什么打算？ – tựa bài 1."],
+[7,"“Anh ấy học tiếng Trung được ba năm rồi.”",["他学汉语学了三年了。","他学汉语三年学了了。","他三年学汉语学了。","他学了汉语三年。"],"Lặp động từ khi có tân ngữ: 学汉语学了三年了 – bài 7."],
+[8,"“Bạn đi đâu thì tôi đi đó.”",["你去哪儿我就去哪儿。","你去哪儿我就去那儿。","你去哪儿我去哪儿吗。","你去哪儿我就哪儿去。"],"Đại từ nghi vấn dùng linh hoạt – tựa bài 8."]]}];
+var L={"C05":"他的汉语说得跟中国人一样好。","C04":"我跟她都认识五年了。","C03":"我最近越来越胖了。","C02":"她总是笑着跟客人说话。","C01":"周末你有什么打算？","L01": "周末我打算在家复习，你呢？", "L02": "经理的办公室在六楼，你坐电梯上去吧。", "L03": "桌子上放着一杯茶和两个面包。", "L04": "她又聪明又热情，客人都喜欢她。", "L05": "最近天气越来越冷了，你要多穿点儿衣服，小心感冒。", "L06": "我的眼镜怎么突然找不到了？刚才还在桌子上。", "L07": "我们九点上班，现在差一刻九点，快走吧。", "L08": "你去哪儿我就去哪儿，我们一起去吧。", "L09": "妹妹的个子跟我一样高，但是比我瘦。", "L10": "数学比历史难多了，我每天都要复习两个小时。"};
+var K='hsk3mk1',T=0,done=false,tick=null,t0=0,plays={},flat=[],f=document.getElementById('f'),mn=document.querySelector('main');
+var SK={A:'Nghe',B:'Nghe',C:'Đọc',D:'Đọc',E:'Viết',F:'Viết'},CNT={Nghe:0,Đọc:0,Viết:0};
+S.forEach(function(s){T+=s.q.length;CNT[SK[s.t.charAt(0)]]+=s.q.length});
+function pq(s){return (Math.round(100/CNT[SK[s.t.charAt(0)]]*10)/10).toString().replace('.',',')}
+if(location.hash==='#gv-reset'){try{localStorage.removeItem(K)}catch(e){}}
+function sh(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function norm(s){return s.replace(/[\s，。？！、,.?!；;：:“”"']/g,'')}
+function tts(id){try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(L[id]);u.lang='zh-CN';u.rate=.8;speechSynthesis.speak(u)}catch(e){}}
+function speak(id){var au=new Audio('audio/'+id+'.mp3');au.onerror=function(){tts(id)};var p=au.play();if(p&&p.catch)p.catch(function(){tts(id)})}
+function build(){
+ done=false;clearInterval(tick);plays={};flat=[];f.className='';mn.className='pre';
+ document.getElementById('res').style.display='none';
+ document.getElementById('tm').textContent='60:00';document.querySelector('.bar').className='bar';
+ var h='',n=0;
+ S.forEach(function(s){
+  h+='<section><h2>'+s.t+' <small class="sk">· kỹ năng '+SK[s.t.charAt(0)]+' · '+pq(s)+' điểm/câu</small></h2><p>'+s.d+'</p>'+(s.q[0][5]==='w'?'<p class="note"><b>Lưu ý:</b> gõ liền các chữ Hán, <b>không cần dấu câu, không cần cách chữ</b>.</p>':'');
+  s.q.forEach(function(q){
+   n++;flat.push(q);var w=q[5]==='w',a=q[4];
+   h+='<div class="q" id="q'+n+'"><p class="qt'+(a?'':' zh')+'"><b>'+n+'.</b>'+q[1].replace('____','<i></i>')+'</p>';
+   if(a)h+='<div class="au"><button type="button" class="ghost pl" data-a="'+a+'" data-n="'+n+'">▶ Nghe câu</button><span id="pc'+n+'">còn 2 lần</span></div>';
+   if(w)h+='<input class="wi zh" id="w'+n+'" autocomplete="off" placeholder="Gõ câu tiếng Trung">';
+   else{
+    h+='<div class="opts'+(a?'':' zh')+'">';
+    sh(q[2].map(function(o,k){return [o,k]})).forEach(function(p,x){
+     h+='<label><input type="radio" name="q'+n+'" value="'+p[1]+'">'+'ABCD'[x]+'. '+p[0]+'</label>';
+    });
+    h+='</div>';
+   }
+   h+='<p class="ex">'+q[3]+'</p></div>';
+  });
+  h+='</section>';
+ });
+ f.innerHTML=h;upd();window.scrollTo(0,0);
+}
+function upd(){
+ var c=f.querySelectorAll('input[type=radio]:checked').length;
+ f.querySelectorAll('.wi').forEach(function(i){if(i.value.trim())c++});
+ document.getElementById('cnt').textContent=c+'/'+T;
+ document.getElementById('pg').style.width=(c/T*100)+'%';
+}
+f.addEventListener('change',upd);f.addEventListener('input',upd);
+f.addEventListener('click',function(e){
+ var b=e.target.closest&&e.target.closest('.pl');if(!b||done)return;
+ var n=b.getAttribute('data-n');plays[n]=plays[n]||0;
+ if(plays[n]>=2)return;plays[n]++;
+ var r=2-plays[n];document.getElementById('pc'+n).textContent=r?'còn '+r+' lần':'đã hết lượt nghe';
+ if(!r)b.disabled=true;
+ speak(b.getAttribute('data-a'));
+});
+function fmt(s){s=Math.max(0,s);return ('0'+Math.floor(s/60)).slice(-2)+':'+('0'+s%60).slice(-2)}
+document.getElementById('go').onclick=function(){
+ var nm=document.getElementById('nm');
+ if(!nm.value.trim()){nm.focus();alert('Hãy nhập họ và tên trước khi bắt đầu.');return}
+ mn.className='';t0=Date.now();
+ tick=setInterval(function(){
+  var left=3600-Math.floor((Date.now()-t0)/1000);
+  document.getElementById('tm').textContent=fmt(left);
+  if(left<=600)document.querySelector('.bar').className='bar warn';
+  if(left<=0)submit(true);
+ },1000);
+ window.scrollTo(0,0);
+};
+function submit(auto){
+ if(done)return;
+ var c=f.querySelectorAll('input[type=radio]:checked').length;
+ f.querySelectorAll('.wi').forEach(function(i){if(i.value.trim())c++});
+ if(!auto&&c<T&&!confirm('Còn '+(T-c)+' câu chưa làm. Vẫn nộp bài?'))return;
+ done=true;clearInterval(tick);window.speechSynthesis&&speechSynthesis.cancel();
+ var used=Math.min(3600,Math.floor((Date.now()-t0)/1000));
+ f.className='done';
+ var ok=0,sec=[],n=0,sk={Nghe:[0,0],Đọc:[0,0],Viết:[0,0]};
+ S.forEach(function(s){
+  var r=0;
+  s.q.forEach(function(q){
+   n++;var box=document.getElementById('q'+n),good=false;
+   if(q[5]==='w'){
+    var wi=document.getElementById('w'+n);wi.disabled=true;
+    var g=q[6]==='d'?function(x){return norm(x).replace(/她/g,'他')}:norm;var v=g(wi.value);good=q[2].some(function(a){return g(a)===v});
+   }else{
+    var sel=f.querySelector('input[name=q'+n+']:checked');
+    f.querySelectorAll('input[name=q'+n+']').forEach(function(i){
+     i.disabled=true;
+     if(i.value==='0')i.parentNode.className='right';
+     else if(i.checked)i.parentNode.className='wrong';
+    });
+    good=!!sel&&sel.value==='0';
+   }
+   if(good){r++;box.className='q ok'}else box.className='q bad';
+  });
+  ok+=r;var kk=SK[s.t.charAt(0)];sk[kk][0]+=r;sk[kk][1]+=s.q.length;sec.push(s.t.charAt(0)+': '+r+'/'+s.q.length);
+ });
+ var tot=0,parts=[];Object.keys(sk).forEach(function(k){var v=Math.round(sk[k][0]/sk[k][1]*1000)/10;tot+=v;parts.push('<b>'+k+': '+v+'/100</b> ('+sk[k][0]+'/'+sk[k][1]+' câu)')});var pts=Math.round(tot*10)/10;
+ var cnt=0;try{cnt=(parseInt(localStorage.getItem(K),10)||0)+1;localStorage.setItem(K,cnt)}catch(e){cnt=0}
+ var dots='';for(var d=0;d<cnt;d++)dots+='<s></s>';
+ var rs=document.getElementById('res');
+ rs.innerHTML='<p><b>'+document.getElementById('nm').value.replace(/</g,'&lt;')+'</b> '+document.getElementById('cl').value.replace(/</g,'&lt;')+'</p><div class="sc">'+pts+'/300</div><p>'+parts.join(' · ')+'</p><p>Đúng '+ok+'/'+T+' câu · '+sec.join(' · ')+'</p><p>Thời gian làm bài: '+fmt(used)+(auto?' (hết giờ, bài tự động nộp)':'')+'</p><p>Cuộn lên để xem đáp án và giải thích từng câu.</p>'+(cnt?'<span class="mk" aria-hidden="true">'+dots+'</span>':'');
+ rs.style.display='block';rs.scrollIntoView({behavior:'smooth',block:'center'});
+}
+document.getElementById('sub').onclick=function(){submit(false)};
+document.getElementById('rst').onclick=build;
+build();
+</script>
+</body>
+</html>

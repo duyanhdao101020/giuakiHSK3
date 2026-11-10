@@ -1,0 +1,48 @@
+﻿HƯỚNG DẪN – ĐỀ THI GIỮA KỲ HSK 3 (BÀI 1–10)
+
+1. CẤU TRÚC THƯ MỤC (giữ nguyên, giải nén cả thư mục)
+   index.html      đề thi, mở bằng Chrome hoặc Edge
+   make-mp3.cmd    tạo 15 file MP3 (10 câu nghe hiểu, 5 câu nghe chép)
+   texts\L01-L10.txt, C01-C05.txt  nội dung câu nghe và câu nghe chép (UTF-8)
+   audio\          nơi chứa MP3 (tạo tự động)
+
+2. TẠO FILE MP3 BẰNG CMD (cần Internet, làm 1 lần)
+   Bước 1. Cài Python từ python.org (tick "Add python.exe to PATH").
+   Bước 2. Mở CMD, gõ:   pip install edge-tts
+           (nếu báo không tìm thấy pip:  python -m pip install edge-tts)
+   Bước 3. Mở CMD trong thư mục đề thi (gõ cmd lên thanh địa chỉ của thư mục rồi Enter), gõ:
+           make-mp3.cmd
+           hoặc bấm đúp make-mp3.cmd.
+   Kết quả: audio\L01-L10.mp3 và audio\C01-C05.mp3 (giọng nữ Xiaoxiao, tốc độ chậm 15%).
+
+   Tạo tay từng file (nếu cần):
+   edge-tts --file texts\L01.txt --voice zh-CN-XiaoxiaoNeural --rate=-15% --write-media audio\L01.mp3
+   Đổi giọng nam:  --voice zh-CN-YunxiNeural      Xem danh sách giọng:  edge-tts --list-voices
+   Đổi tốc độ:     mở make-mp3.cmd bằng Notepad, sửa dòng  set RATE=-15%%  (ví dụ -10%% nhanh hơn một chút, -25%% chậm hơn),
+                   rồi chạy lại để tạo MP3 mới. Gõ tay thì dùng --rate=-25% (một dấu %).
+                   Gợi ý cho HSK 3: -10% đến -20%; nghe thử 2-3 file trước khi phát cho cả lớp.
+
+3. TỔ CHỨC THI
+   - Mở index.html, học sinh nhập họ tên + lớp rồi bấm "Bắt đầu làm bài".
+   - Đồng hồ đếm ngược 60 phút (còn 10 phút đổi màu đỏ), hết giờ tự nộp bài.
+   - Mỗi câu nghe được phát tối đa 2 lần. Nên làm bài trên máy có loa/tai nghe.
+   - Nếu chưa có MP3, trình duyệt sẽ tự đọc bằng giọng máy (kém ổn định hơn, nên tạo MP3).
+   - Phần Nghe chép: học sinh chỉ nghe, không thấy chữ; máy chấm chấp nhận 她/他 thay cho nhau.
+   - Câu gõ chữ Hán (Nghe chép, Viết câu): không yêu cầu dấu câu, không yêu cầu cách chữ (đã ghi lưu ý ở đầu đề).
+   - Phần Nghe chép và Viết câu cần bộ gõ tiếng Trung (Pinyin) trên máy học sinh.
+
+4. DẤU HIỆU LẦN LÀM (CHỈ GIÁO VIÊN BIẾT)
+   Ở màn hình kết quả, góc dưới bên phải khung điểm có các chấm tròn rất nhỏ, mờ.
+   Số chấm = lần làm thứ mấy trên trình duyệt/máy đó (lần 1 = 1 chấm, cứ 5 chấm có một khoảng cách).
+   Học sinh không được thông báo về dấu này. Lưu ý:
+   - Đếm theo từng trình duyệt trên từng máy; đổi trình duyệt, chế độ ẩn danh hoặc xóa dữ liệu duyệt web sẽ về lại 1 chấm.
+   - Đặt lại bộ đếm: mở index.html#gv-reset (thêm #gv-reset sau địa chỉ) rồi tải lại trang.
+   - Nút "Làm lại" xáo trộn thứ tự đáp án; câu hỏi giữ nguyên.
+
+5. CÁCH CHẤM ĐIỂM (tổng 300)
+   - Kỹ năng NGHE 100 điểm: phần A Nghe hiểu (10 câu) + phần B Nghe chép (5 câu), mỗi câu khoảng 6,7 điểm.
+   - Kỹ năng ĐỌC 100 điểm: phần C Từ vựng (10 câu) + phần D Ngữ pháp (12 câu), mỗi câu khoảng 4,5 điểm.
+   - Kỹ năng VIẾT 100 điểm: phần E Viết câu (5 câu) + phần F Dịch Việt–Trung (3 câu), mỗi câu 12,5 điểm.
+   - Mỗi câu đúng/sai trọn điểm, không chấm điểm lẻ. Điểm kỹ năng = số câu đúng / số câu của kỹ năng x 100.
+
+6. ĐÁP ÁN: hiện sau khi nộp bài, kèm giải thích và số bài.
