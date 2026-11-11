@@ -272,8 +272,9 @@ function submit(auto){
  var cnt=0;try{cnt=(parseInt(localStorage.getItem(K),10)||0)+1;localStorage.setItem(K,cnt)}catch(e){cnt=0}
  var dots='';for(var d=0;d<cnt;d++)dots+='<s></s>';
  var rs=document.getElementById('res');
- rs.innerHTML='<p><b>'+esc(document.getElementById('nm').value)+'</b> '+esc(document.getElementById('cl').value)+'</p><div class="sc">'+pts+'/300</div><p>'+parts.join(' · ')+'</p><p>Đúng '+ok+'/'+T+' câu · '+sec.join(' · ')+'</p><p>Thời gian làm bài: '+fmt(used)+(auto?' (hết giờ, bài tự động nộp)':'')+'</p><p>Xem lại từng phần ở các thẻ phía trên để biết đáp án và giải thích.</p>'+(cnt?'<span class="mk" aria-hidden="true">'+dots+'</span>':'');
+ rs.innerHTML='<p><b>'+esc(document.getElementById('nm').value)+'</b> '+esc(document.getElementById('cl').value)+'</p><div class="sc">'+pts+'/300</div><p>'+parts.join(' · ')+'</p><p>Đúng '+ok+'/'+T+' câu · '+sec.join(' · ')+'</p><p>Thời gian làm bài: '+fmt(used)+(auto?' (hết giờ, bài tự động nộp)':'')+'</p><p>Xem lại từng phần ở các thẻ phía trên để biết đáp án và giải thích.</p><p><button type="button" id="again">Làm lại</button></p>'+(cnt?'<span class="mk" aria-hidden="true">'+dots+'</span>':'');
  rs.style.display='block';
+ document.getElementById('again').onclick=function(){try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}location.reload()};
  var sb=document.getElementById('sub');sb.disabled=true;sb.textContent='Đã nộp';
  stat();window.scrollTo(0,0);
 }
